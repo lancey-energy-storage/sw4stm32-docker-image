@@ -17,6 +17,6 @@ RUN wget www.ac6-tools.com/downloads/SW4STM32/install_sw4stm32_linux_64bits-v${S
 		rm -f install_sw4stm32_linux_64bits-v${SW4STM32_VERSION}.run
 
 # Install arm correctly
- RUN cd root/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools && \
-		tar -xjf st-gnu-arm-gcc-6-2017-q2-update_gdb-5_4-2016q3-20160926-linux.tar.bz2 && \
-		mv st-gnu-arm-gcc-6-2017-q2-update_gdb-5_4-2016q3 compiler
+ RUN cd root/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_*/tools && \
+		tar -xjf st-gnu-arm-gcc-6-2017-*.tar.bz2 && \
+		mv st-gnu-arm-gcc-* compiler
