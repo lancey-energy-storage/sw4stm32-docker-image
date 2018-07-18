@@ -1,7 +1,8 @@
 #!/usr/bin/expect
 
+set installscript [lindex $argv 0];
 
-spawn ./install_sw4stm32_linux_64bits-v2.4.run -f -c
+spawn ./$installscript -f -c
 expect "Press 1 to continue, 2 to quit, 3 to redisplay"
 send "1\r"
 #expect -timeout 15 {"--More--"}
