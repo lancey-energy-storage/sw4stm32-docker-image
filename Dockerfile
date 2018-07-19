@@ -18,5 +18,7 @@ RUN wget www.ac6-tools.com/downloads/SW4STM32/install_sw4stm32_linux_64bits-v${S
 
 # Install arm correctly
  RUN cd root/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_*/tools && \
-		tar -xjf st-gnu-arm-gcc-6-2017-*.tar.bz2 && \
-		mv st-gnu-arm-gcc-* compiler
+    mkdir -p compiler && cd ./compiler && \
+		tar -xjf ../st-gnu-arm-gcc-*.tar.bz2 && \
+		mv st-gnu-arm-gcc-*/* . && \
+    rmdir st-gnu-arm-gcc-*  
