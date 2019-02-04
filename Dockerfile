@@ -12,7 +12,7 @@ COPY swinstall_script.sh ./
 
 # Install System Workbench
 RUN wget www.ac6-tools.com/downloads/SW4STM32/install_sw4stm32_linux_64bits-${SW4STM32_VERSION}.run && \
-		chmod +x install_sw4stm32_linux_64bits-v${SW4STM32_VERSION}.run && \
+		chmod +x install_sw4stm32_linux_64bits-${SW4STM32_VERSION}.run && \
 		expect swinstall_script.sh install_sw4stm32_linux_64bits-${SW4STM32_VERSION}.run && \
 		rm -f install_sw4stm32_linux_64bits-${SW4STM32_VERSION}.run
 
