@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+
+   <extension
+         point="fr.ac6.mcu.externaltools.tools">
+      <Tool_MCUCompiler
+            name="ARM Toolchain (Linux 64bit)"
+            resource="tools/st-gnu-arm-gcc-7-2018-q2-update_gdb-5_4-2016q3-linux.tar.bz2">
+      </Tool_MCUCompiler>
+   </extension>
+   
+</fragment>

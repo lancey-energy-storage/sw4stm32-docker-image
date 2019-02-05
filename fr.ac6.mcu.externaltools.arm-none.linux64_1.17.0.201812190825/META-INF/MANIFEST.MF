@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: fr.ac6.mcu.externaltools.arm-none.linux64;singlet
+ on:=true
+Archiver-Version: Plexus Archiver
+Built-By: acitlsqa
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64))
+Bundle-Vendor: Ac6
+Fragment-Host: fr.ac6.mcu.externaltools
+Bundle-Name: GNU Tools ARM Embedded (for Linux 64bits)
+Bundle-Version: 1.17.0.201812190825
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_112
+
