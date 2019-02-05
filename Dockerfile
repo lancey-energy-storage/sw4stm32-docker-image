@@ -9,7 +9,7 @@ ENV SW4STM32_VERSION v2.7
 
 # Utils
 COPY swinstall_script.sh ./
-COPY fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825.tar.gz ./
+
 
 # Install System Workbench
 RUN wget www.ac6-tools.com/downloads/SW4STM32/install_sw4stm32_linux_64bits-${SW4STM32_VERSION}.run && \
@@ -23,11 +23,3 @@ RUN wget www.ac6-tools.com/downloads/SW4STM32/install_sw4stm32_linux_64bits-${SW
 		tar -xjf ../st-gnu-arm-gcc-*.tar.bz2 && \
 		mv st-gnu-arm-gcc-*/* . && \
     rmdir st-gnu-arm-gcc-*
-
-# Copy new version of arm (compressed) and extract it
-
-RUN  cd	root/.. && \
-	 mv	fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825.tar.gz /root/Ac6/SystemWorkbench/plugins/ && \
-	 cd /root/Ac6/SystemWorkbench/plugins/ && \
-	 tar -xzf fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825.tar.gz && \
-	 rm fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825.tar.gz
