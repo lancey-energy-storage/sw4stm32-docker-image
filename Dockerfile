@@ -18,12 +18,13 @@ RUN wget www.ac6-tools.com/downloads/SW4STM32/install_sw4stm32_linux_64bits-${SW
 
 # Install arm correctly
  RUN cd root/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_*/tools && \
- 	ls &&\
     mkdir -p compiler && cd ./compiler && \
 		tar -xjf ../st-gnu-arm-gcc-*.tar.bz2 && \
 		mv st-gnu-arm-gcc-*/* . && \
     rmdir st-gnu-arm-gcc-*
 
-# Copy new version of arm
+# Copy new version of arm (compressed) and extract it
 
-COPY fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825 root/Ac6/SystemWorkbench/plugins/
+COPY fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825.tar.gz root/Ac6/SystemWorkbench/plugins/ && \
+	 tar -xzf fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825.tar.gz && \
+	 rm fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825.tar.gz

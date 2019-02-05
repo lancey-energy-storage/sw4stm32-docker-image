@@ -1,9 +1,0 @@
-This package content is strictly similar to the package delivered by ARM on the
-following website except for GDB binaries.
-	-> https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads
-
-GDB binaries used by System Workbench for STM32 remain stuck on version 7.10
-until GDB >7.10 support is fully validated.
-The following binaries are picked from GNU ARM 5.4 delivery:
-	- arm-none-eabi-gdb
-	- arm-none-eabi-gdb-py
