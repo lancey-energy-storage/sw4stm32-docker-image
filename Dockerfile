@@ -23,3 +23,8 @@ RUN wget www.ac6-tools.com/downloads/SW4STM32/install_sw4stm32_linux_64bits-${SW
 		tar -xjf ../st-gnu-arm-gcc-*.tar.bz2 && \
 		mv st-gnu-arm-gcc-*/* . && \
     rmdir st-gnu-arm-gcc-*
+
+# Create workspace directory
+
+ RUN cd && \
+ 	 mkdir workspace 
