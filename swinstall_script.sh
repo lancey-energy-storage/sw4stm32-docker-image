@@ -15,6 +15,8 @@ expect "Press 1 to accept, 2 to reject, 3 to redisplay"
 send "1\r"
 expect "Press 1 to accept, 2 to reject, 3 to redisplay"
 send "1\r"
+expect "Press 1 to accept, 2 to reject, 3 to redisplay"
+send "1\r"
 
 expect "Select the installation path:"
 send "/root/Ac6/SystemWorkbench\r"
