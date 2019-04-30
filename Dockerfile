@@ -5,7 +5,7 @@ RUN apt-get update && \
 		apt-get install -y lib32ncurses5 expect udev make wget gcc gcc-arm-linux-gnueabi tar bzip2
 
 # Environment variable
-ENV SW4STM32_VERSION v2.8
+ENV SW4STM32_VERSION v2.9
 
 # Utils
 COPY swinstall_script.sh ./
